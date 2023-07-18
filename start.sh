@@ -5,7 +5,7 @@ fi
 
 if [ $API_URL ]; then
   echo "当前 API 地址为: $API_URL"
-  sed -i "s#http://127.0.0.1:25500#$API_URL#g" /usr/share/nginx/html/conf/config.js
+  sed -i "s#http://sub.jacky.lyd#$API_URL#g" /usr/share/nginx/html/conf/config.js
 else
   echo "当前为默认本地 API 地址: http://sub.jacky.ltd"
   echo "如需修改请在容器启动时使用 -e API_URL='https://sub.ops.ci' 传递环境变量"
